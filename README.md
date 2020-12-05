@@ -21,6 +21,7 @@ In this file, the following steps have been done to answer the question:
 This is similar to "search.spec.js" file. The difference is that the search date is selected based on the current date:
 
 `const startDay = dayAfter(10);`
+
 `const endDay = dayAfter(20);`
 
 `dayAfter` method returns the number of days specified after the current date.
