@@ -1,35 +1,26 @@
 # Alibaba Search
 
-## The challenge
+## search.spec.js
 
-Your task is to write a test using [Cypress](https://www.cypress.io/) that carries out a search action on [https://www.alibaba.ir](https://www.alibaba.ir).
+In this file, the following steps have been done to answer the question:
 
-## What the test should do
+- Loading Alibaba site
+- Finding "رفت و برگشت" option and checking it
+- Finding "تهران" and "مشهد" from menu and clicking it
+- Finding 24 and 27 day and clicking it
+- Adding passenger count with finding increase button and clicking it for four times
+- Searching the result with submiting the form
+- Waiting for loading the result page, showing and hidding the loading banner, and finally showing the result of search
+- Finding "تماس با ما" link.
+- Scrolling viewport on that link and clicking it.
+- Waiting for loading the page.
+- Assertion on title of page ("تماس با ما") in the top of page
 
-- Write a test that opens [https://www.alibaba.ir](https://www.alibaba.ir) and fills the data like the image below:
+## search-v2.spec.js
 
-![omnibox](./omnibox.png)
+This is similar to "search.spec.js" file. The difference is that the search date is selected based on the current date:
 
-- Click on the "جستجو" button.
+`const startDay = dayAfter(10);`
+`const endDay = dayAfter(20);`
 
-- Wait until the results are finished.
-
-- Scroll to the bottom of the page and click on "تماس با ما" in the footer. (This scroll must be done as if the mouse was scrolling)
-
-![footer](./footer.png)
-
-## What do we expect?
-- We expect you to detect the test scenarios and create comfortable test suites and test cases.
-- We expect you to have solutions for re-using cypress commands.
-- We expect you to handle some edge cases which demonstrate your abilities with cypress timeouts.
-- We expect you to keep your test scenarios clean and of course reliable.
-
-## Sharing your solution
-
-Please reply to the email you received with a link to a GitHub repository that contains your code. This repository needs a `README.md` file that explains everything we need to know.
-
-## Giving feedback
-
-Feedback is always welcome, so if you have any to give on this challenge please email frontend[at]alibaba[dot]ir.
-
-**Have fun building!** 🚀
+`dayAfter` method returns the number of days specified after the current date.
